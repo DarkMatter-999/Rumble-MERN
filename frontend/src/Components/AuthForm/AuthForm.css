@@ -1,0 +1,62 @@
+.AuthForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3c4046;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.Form {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  min-width: 40vw;
+  flex-direction: column;
+}
+
+.Form > input {
+  background-color: #23272a;
+  border: none;
+  border-radius: 3px;
+  height: 35px;
+  width: 90%;
+}
+.Form > label {
+  width: 90%;
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.Form > button {
+  background: #5663f7;
+  border-radius: 3px;
+  padding: 0.75rem;
+  width: 90%;
+  color: #ffffff;
+  margin: 1rem 0rem;
+  border: none;
+  font-size: medium;
+}
+
+.Form > div {
+  padding: 10px;
+  align-self: flex-start;
+  cursor: pointer;
+  font-weight: 100;
+  color: #40acff;
+}
+
+.Form > div:hover {
+  text-decoration: underline;
+}
+
+h4 {
+  margin: 0;
+  color: #a3a3a3;
+  font-weight: 100;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+}
