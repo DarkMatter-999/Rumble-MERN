@@ -1,5 +1,15 @@
+:root {
+  --theme: #7289da;
+  --theme-sat: #7391ff;
+  --theme-sat-more: #5663f7;
+  --moredark: #202225;
+  --dark: #2a2b2f;
+  --lightdark: #36393f;
+}
+
 .App {
   overflow: hidden;
+  color: white;
 }
 
 ::-webkit-scrollbar {

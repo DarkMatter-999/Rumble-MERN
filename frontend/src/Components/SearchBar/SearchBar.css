@@ -1,0 +1,14 @@
+.SearchBar {
+  color: white;
+  padding: 15px 10px;
+}
+
+.SearchBar > input {
+  color: white;
+  background-color: var(--dark);
+  border: none;
+  width: 95%;
+  height: 30px;
+  border-radius: 3px;
+  padding: 0 5px;
+}

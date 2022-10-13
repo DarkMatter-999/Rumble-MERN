@@ -1,0 +1,15 @@
+.Channels {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  background-color: var(--dark);
+  border-radius: 5px;
+}
+
+.Channels hr {
+  width: 100%;
+  margin: 0;
+  height: 3px;
+  border: none;
+  background-color: var(--moredark);
+}

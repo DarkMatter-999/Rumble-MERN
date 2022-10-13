@@ -1,0 +1,16 @@
+.GroupIcon {
+  padding: 1px 0;
+  align-self: center;
+}
+
+.GroupImg > img {
+  height: 3rem;
+  width: auto;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.GroupImg > img:hover {
+  /* border: white 3px solid; */
+  border-radius: 30%;
+}
