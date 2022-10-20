@@ -22,7 +22,7 @@
 }
 
 .MessageContainer {
-  height: calc(100vh - 62px);
+  height: calc(100vh - 62px - 90px);
   overflow-y: scroll;
   width: 100%;
 }
@@ -33,23 +33,13 @@
   width: 80%;
 }
 
-.Spacer {
-  height: 100px;
-}
-
-/* .MessageContainer::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  background-color: #f5f5f5;
-}
-
 .MessageContainer::-webkit-scrollbar {
-  width: 12px;
-  background-color: #f5f5f5;
+  visibility: visible;
+  width: 8px;
+  background-color: var(--lightdark);
 }
 
 .MessageContainer::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #555;
-} */
+  border-radius: 4px;
+  background-color: var(--moredark);
+}

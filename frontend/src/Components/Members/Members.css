@@ -1,5 +1,6 @@
 .Members {
   width: 20vw;
+  height: 100vh;
   padding: 10px;
   background-color: var(--dark);
 }
