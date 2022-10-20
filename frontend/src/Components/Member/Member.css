@@ -1,0 +1,30 @@
+.Member {
+  display: flex;
+  flex-direction: row;
+}
+
+.Img {
+  position: relative;
+}
+
+.Img > img {
+  height: 2.3rem;
+  width: auto;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.Name {
+  align-self: center;
+}
+
+.OnlineStatus {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background-color: lawngreen;
+  height: 0.75rem;
+  width: 0.75rem;
+  border-radius: 50%;
+  border: 2px solid var(--lightdark);
+}

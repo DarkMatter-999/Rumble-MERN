@@ -1,6 +1,7 @@
 .GroupIcon {
   padding: 1px 0;
   align-self: center;
+  margin: 5px 10px;
 }
 
 .GroupImg > img {

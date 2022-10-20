@@ -1,4 +1,11 @@
 .Title {
-  position: fixed;
   width: 100%;
+  height: 60px;
+}
+
+.Title > h3 {
+  position: inherit;
+  padding: 1px;
+  height: 100%;
+  margin-left: 25px;
 }
