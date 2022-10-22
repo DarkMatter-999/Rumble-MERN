@@ -135,15 +135,19 @@ export const friendUser = async (req, res) => {
     if(id===_id) {
         res.status(403).json("Action forbidden")
     } else {
-        const self = await UserModel.findById(_id)
-        const friend = await UserModel.findById(id)
-
-        if(!self.friends.includes(id)) {
-            await self.updateOne({$push: {friends: id}})
-            await friend.updateOne({$push: {friends: _id}})
-            res.status(200).json("Friended user")
-        } else {
-            res.status(403).json("Already friend")
+        try {
+            const self = await UserModel.findById(_id)
+            const friend = await UserModel.findById(id)
+    
+            if(!self.friends.includes(id)) {
+                await self.updateOne({$push: {friends: id}})
+                await friend.updateOne({$push: {friends: _id}})
+                res.status(200).json("Friended user")
+            } else {
+                res.status(403).json("Already friend")
+            }
+        } catch (error) {
+            res.status(500).json({message: error.message})
         }
     }
 }
@@ -156,15 +160,19 @@ export const unfriendUser = async (req, res) => {
     if(id===_id) {
         res.status(403).json("Action forbidden")
     } else {
-        const self = await UserModel.findById(_id)
-        const friend = await UserModel.findById(id)
+        try {
+            const self = await UserModel.findById(_id)
+            const friend = await UserModel.findById(id)
 
-        if(self.friends.includes(id)) {
-            await self.updateOne({$pull: {friends: id}})
-            await friend.updateOne({$pull: {friends: _id}})
-            res.status(200).json("Unfriended user")
-        } else {
-            res.status(403).json("Already not friend")
+            if(self.friends.includes(id)) {
+                await self.updateOne({$pull: {friends: id}})
+                await friend.updateOne({$pull: {friends: _id}})
+                res.status(200).json("Unfriended user")
+            } else {
+                res.status(403).json("Already not friend")
+            }
+        } catch (error) {
+            res.status(500).json({message: error.message})
         }
     }
 }

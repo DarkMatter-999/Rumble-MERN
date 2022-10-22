@@ -6,6 +6,8 @@ import cors from 'cors'
 
 import Auth from './Routes/Auth.js'
 import User from './Routes/User.js'
+import Chat from './Routes/Chat.js'
+import Message from './Routes/Message.js'
 
 dotenv.config()
 
@@ -25,3 +27,5 @@ mongoose.connect(process.env.MONGO_URI, {
 
 app.use('/api/auth', Auth)
 app.use('/api/user', User)
+app.use('/api/chat', Chat)
+app.use('/api/message', Message)
