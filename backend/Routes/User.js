@@ -1,5 +1,5 @@
 import express from 'express'
-import { deleteUser, friendUser, getUser, unfriendUser, updatePasswd, updateUser } from '../Controllers/UserController.js'
+import { deleteUser, findUser, friendUser, getUser, unfriendUser, updatePasswd, updateUser } from '../Controllers/UserController.js'
 
 import authMiddleware from '../Middlewares/AuthMiddleware.js'
 
@@ -12,5 +12,6 @@ router.delete('/:id', authMiddleware, deleteUser)
 router.put('/:id/updatepw', authMiddleware, updatePasswd)
 router.put('/:id/friend', authMiddleware, friendUser)
 router.put('/:id/unfriend', authMiddleware, unfriendUser)
+router.post('/:id', authMiddleware, findUser)
 
 export default router

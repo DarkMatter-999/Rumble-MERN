@@ -1,0 +1,33 @@
+.mantine-Modal-modal {
+  background-color: var(--lightlight);
+}
+
+.SearchModal {
+  display: flex;
+  flex-direction: column;
+}
+
+.Top {
+  display: flex;
+  flex-direction: row;
+}
+
+.Top > svg {
+  padding: 10px;
+}
+
+.Top > input {
+  color: white;
+  background-color: var(--moredark);
+  border: none;
+  width: 100%;
+  height: 3rem;
+  font-size: 1.5rem;
+  border-radius: 3px;
+  padding: 0 5px;
+}
+
+.Users {
+  margin-left: 10px;
+  padding: 10px;
+}

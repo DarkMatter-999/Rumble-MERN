@@ -176,3 +176,19 @@ export const unfriendUser = async (req, res) => {
         }
     }
 }
+
+
+export const findUser = async (req, res) => {
+    const {username} = req.body
+
+    try {
+        const users = await UserModel.find({"username": {$regex: username, $options: 'i'}})
+        if(users) {
+                res.status(200).json({"users":users})
+        } else {
+            res.status(404).json("User not found")
+        }
+    } catch (error) {
+        res.status(500).json({message: error.message})
+    }
+}
