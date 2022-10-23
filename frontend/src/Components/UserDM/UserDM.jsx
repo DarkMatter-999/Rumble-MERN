@@ -1,5 +1,4 @@
 import React from 'react'
-
 import './UserDM.css'
 
 const UserDM = ({username}) => {

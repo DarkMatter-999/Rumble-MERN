@@ -5,18 +5,32 @@ import './Sidebar.css'
 import {groups} from '../../data/serverdummy.js'
 import GroupIcon from '../GroupIcon/GroupIcon'
 
+import { useDispatch, useSelector } from 'react-redux'
+import { useEffect } from 'react'
+import { getChats } from '../../Actions/ChatAction'
+
 const Sidebar = () => {
   const friends = {
     name:"Friends",
     img: "https://thumbs.dreamstime.com/b/white-people-logo-group-icon-group-people-group-users-dark-background-people-logo-group-icon-group-people-group-133800107.jpg"
   }
+
+  const dispatch = useDispatch()
+  const { user } = useSelector((state) => state.authReducer.authData);
+
+  const {chats} = useSelector((state) => state.chatReducer);
+
+  useEffect(() => {
+    dispatch(getChats())
+  }, [user])
+
   return (
     <div className="Sidebar">
         <GroupIcon data={friends} />
         <hr />
-        {groups.map((data, id) => {
+        {chats.map((data) => {
             return (
-                <GroupIcon key={id} data={data} />
+                <GroupIcon key={data._id} data={data} />
             )
         }) }
     </div>

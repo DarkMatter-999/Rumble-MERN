@@ -31,3 +31,20 @@
   margin-left: 10px;
   padding: 10px;
 }
+
+.User {
+  display: flex;
+  flex-direction: row;
+}
+
+.User > .UserDM {
+  width: 90%;
+}
+
+.Friend {
+  align-self: center;
+}
+
+.Unfriend {
+  align-self: center;
+}

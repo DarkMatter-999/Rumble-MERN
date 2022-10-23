@@ -1,15 +1,9 @@
-.UserDM {
+.User {
   display: flex;
   flex-direction: row;
-  transition: 0.3s;
-  border-radius: 5px;
 }
 
-.UserDM:hover {
-  background-color: var(--lightlight);
-}
-
-.UserDM > img {
+.User > img {
   height: 2.5rem;
   width: auto;
   border-radius: 50%;

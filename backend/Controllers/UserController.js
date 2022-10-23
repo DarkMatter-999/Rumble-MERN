@@ -192,3 +192,19 @@ export const findUser = async (req, res) => {
         res.status(500).json({message: error.message})
     }
 }
+
+export const getFriends = async (req, res) => {
+    const {_id} = req.body
+
+    try {
+        const {friends} = await UserModel.findById(_id)
+
+        let f = {}
+        for await (const e of friends) {
+            f[e] = await UserModel.findById(e).select("username")
+        }
+        res.status(200).json(f)  
+    } catch (error) {
+        res.status(500).json({message: error.message})
+    }
+}

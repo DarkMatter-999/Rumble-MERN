@@ -3,7 +3,7 @@ import { Modal, useMantineTheme } from "@mantine/core";
 import { UilSearch } from '@iconscout/react-unicons'
 
 import './FindModal.css'
-import UserDM from '../UserDM/UserDM';
+import User from '../User/User';
 import { useDispatch, useSelector } from 'react-redux'
 
 import { findUser } from '../../Actions/UserAction';
@@ -13,6 +13,7 @@ const FindModal = ({ modalOpened, setModalOpened }) => {
     const dispatch = useDispatch();
 
     const userdata = useSelector((state) => state.userReducer.users)
+    const { user } = useSelector((state) => state.authReducer.authData);
 
     const [data, setData] = useState({
         username: ""
@@ -47,8 +48,10 @@ const FindModal = ({ modalOpened, setModalOpened }) => {
 
                 </div>
                 <div className="Users">
-                    {userdata.users.map((u, id) => {
-                        return <UserDM username={u.username} key={id}/>
+                    {userdata && userdata.users.map((u, id) => {
+                        return user.username !== u.username?
+                            <User u={u} key={id} />
+                            : ""
                     })}
                 </div>
             </div>

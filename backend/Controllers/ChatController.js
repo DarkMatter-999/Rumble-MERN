@@ -63,3 +63,15 @@ export const leaveServer = async (req, res) => {
         res.status(500).json({message: error.message})
     }
 }
+
+export const getUserChats = async (req, res) => {
+    const {_id} = req.body
+    try {
+        const chat = await ChatModel.find({
+            members: {$in: [_id]}
+        })
+        res.status(200).json(chat)
+    } catch (error) {
+        res.status(500).json({message: error.message})
+    }
+}
