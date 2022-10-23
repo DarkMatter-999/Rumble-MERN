@@ -20,7 +20,7 @@ export const addMessage = async (req, res) => {
 
 
 export const getMessages = async (req, res) => {
-    const chatId = req.params.chatId
+    const chatId = req.query.chatId
 
     try {
         const result = await MessageModel.find({chatId})

@@ -22,7 +22,7 @@ const Channels = () => {
     <div className="Channels">
         <SearchBar />
         <hr />
-        {user.friends.map((friend, id) => {
+        {friends && user.friends.map((friend, id) => {
           return <UserDM username={friends[friend].username} key={id} />
         })}
     </div>

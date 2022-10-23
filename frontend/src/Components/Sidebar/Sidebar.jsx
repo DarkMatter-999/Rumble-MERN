@@ -2,7 +2,6 @@ import React from 'react'
 
 import './Sidebar.css'
 
-import {groups} from '../../data/serverdummy.js'
 import GroupIcon from '../GroupIcon/GroupIcon'
 
 import { useDispatch, useSelector } from 'react-redux'
@@ -28,7 +27,7 @@ const Sidebar = () => {
     <div className="Sidebar">
         <GroupIcon data={friends} />
         <hr />
-        {chats.map((data) => {
+        {chats && chats.map((data) => {
             return (
                 <GroupIcon key={data._id} data={data} />
             )
