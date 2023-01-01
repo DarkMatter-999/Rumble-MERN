@@ -1,0 +1,20 @@
+.CreateIcon {
+  padding: 1px 0;
+  align-self: center;
+  margin: 5px 10px;
+}
+
+.CreateImg > svg {
+  height: 2rem;
+  padding: 0.5rem;
+  width: auto;
+  border-radius: 50%;
+  transition: 0.3s;
+  color: #b688ffdd;
+}
+
+.CreateImg > svg:hover {
+  color: #fff;
+  background-color: #b688ffdd;
+  border-radius: 30%;
+}

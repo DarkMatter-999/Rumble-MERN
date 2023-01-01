@@ -13,6 +13,10 @@ export const getChatID = (id) => async(dispatch) => {
     dispatch({type:"GET_CHAT_ID", data:id})
 }
 
+export const getMembers = (members) => async(dispatch) => {
+    dispatch({type: "GET_CHAT_MEMBERS", data:members})
+}
+
 export const sendMessage = async (formdata) => {
     await MessageAPI.sendMessage(formdata)
 }

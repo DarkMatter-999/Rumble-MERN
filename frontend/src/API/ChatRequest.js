@@ -11,3 +11,5 @@ API.interceptors.request.use((req) => {
 })
 
 export const getChats = (formdata) => API.post('/api/chat/get', formdata)
+
+export const createGroup = (formdata) => API.post('/api/chat', formdata)

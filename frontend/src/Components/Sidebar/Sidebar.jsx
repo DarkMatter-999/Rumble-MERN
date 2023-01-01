@@ -7,6 +7,7 @@ import GroupIcon from '../GroupIcon/GroupIcon'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import { getChats } from '../../Actions/ChatAction'
+import GroupCreate from '../GroupCreate/GroupCreate'
 
 const Sidebar = () => {
   const friends = {
@@ -32,6 +33,8 @@ const Sidebar = () => {
                 <GroupIcon key={data._id} data={data} />
             )
         }) }
+
+        <GroupCreate />
     </div>
   )
 }
